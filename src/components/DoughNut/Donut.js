@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Doughnut } from 'react-chartjs-2'
-import { Assets } from './mockData';
 import {
   Chart as ChartJS, ArcElement, Tooltip
 } from 'chart.js'
 
+import useDoughNutData from './useDoughNutData';
 ChartJS.register(
   ArcElement,
   Tooltip
@@ -13,33 +13,15 @@ ChartJS.register(
 const Donut = () => {
 
   const [view, setView] = useState('Assets')
-  let result = []
-  const sumByType = Assets.reduce((acc, asset) => {
-    const index = acc.findIndex(item => item.type === asset.type);
 
-    if (index === -1) {
-        acc.push({ type: asset.type, sum: asset.amount });
-    } else {
-        acc[index].sum += asset.amount;
-    }
+  const { assetLabel, individualLabel, assetData, individualData } = useDoughNutData()
 
-    return acc;
-}, []);
+  const portfolioData = view === 'Assets' ? assetData : individualData
 
-
-  const portfolioData = view === 'Assets' ? sumByType.map(item => item.sum) : Assets.map(asset => asset.amount)
-  const labels = view === 'Assets' ?  Assets.map(asset => {
-    if(!result.includes(asset.type)){
-      result.push(asset.type)
-    }
-    return result
-  }) : Assets.map(asset => {
-      result.push(asset.name)
-    return result
-  })
+  const labels = view === 'Assets' ?  assetLabel : individualLabel
 
   const data = {
-    labels:labels[0],
+    labels:labels,
     datasets: [{
       data: portfolioData,
       backgroundColor: [

@@ -1,5 +1,5 @@
 import React from 'react'
-import Donut from './Donut'
+import Donut from './DoughNut/Donut'
 import Chart from './Chart'
 
 const Visuals = () => {
