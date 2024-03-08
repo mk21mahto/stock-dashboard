@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { monthlyMockData } from '../../../../mock/getMonthlyMock';
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement } from 'chart.js';
@@ -47,18 +47,24 @@ const Chart = () => {
 
   return (
     <div className='grid-span-4 my-5 mx-20'>
-      <select onChange={(e) => handleFilterChange(e.target.value, true)}>
-        {monthlyMockData.Jan.map(data => (
-          <option key={data.asset} value={data.asset}>
-            {data.asset}
-          </option>
-        ))}
-      </select>
-      <select onChange={(e) => handleFilterChange(e.target.value, false)}>
-        <option value="12">12 months</option>
-        <option value="6">6 months</option>
-        <option value="3">3 months</option>
-      </select>
+      <div className='flex flow-root'>
+        <div className='float-left'>
+          <select onChange={(e) => handleFilterChange(e.target.value, true)}>
+            {monthlyMockData.Jan.map(data => (
+              <option key={data.asset} value={data.asset}>
+                {data.asset}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className='float-right'>
+          <select onChange={(e) => handleFilterChange(e.target.value, false)}>
+            <option value="12">12 months</option>
+            <option value="6">6 months</option>
+            <option value="3">3 months</option>
+          </select>
+        </div>
+      </div>
       <div className='h-72 my-5'>
         <Line data={data} />
       </div>

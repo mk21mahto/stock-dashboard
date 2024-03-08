@@ -4,8 +4,8 @@ import Card from './Cards/Card'
 
 const Dashboard = () => {
   return (
-    <div className='grid grid-flow-row bg-slate-200'>
-      <h1 className='p-5 font-bold'>Dashboard</h1>
+    <div className='grid grid-flow-row bg-sky-50'>
+      <h1 className='p-5 font-bold mx-5'>Dashboard</h1>
         <Visuals></Visuals>
         <div>
             <Card></Card>

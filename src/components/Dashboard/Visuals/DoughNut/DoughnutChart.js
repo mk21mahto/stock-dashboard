@@ -25,9 +25,16 @@ const DoughnutChart = () => {
     datasets: [{
       data: portfolioData,
       backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
+        'rgb(55, 154, 230)',
+        'rgb(17, 180, 221)',
+        'rgb(43, 125, 180)',
+        'rgb(17, 180, 221)',
+        'rgb(92, 170, 218)',
+        'rgb(26, 139, 239)',
+        'rgb(107, 201, 244)',
+        'rgb(4, 89, 174)',
+        'rgb(168, 192, 244)',
+        'rgb(47, 50, 228)'
       ],
       hoverOffset: 4
     }]
