@@ -1,6 +1,6 @@
 import React from 'react'
-import Visuals from './Visuals'
-import Card from './Card'
+import Visuals from './Visuals/Visuals'
+import Card from './Cards/Card'
 
 const Dashboard = () => {
   return (

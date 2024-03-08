@@ -1,10 +1,10 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard/Dashboard'
 
 const Body = () => {
   return (
-    <div className='flex'>
+    <div className='grid grid-flow-col'>
         <Sidebar></Sidebar>
         <Dashboard></Dashboard>
     </div>

@@ -10,7 +10,7 @@ ChartJS.register(
   Tooltip
 );
 
-const Donut = () => {
+const DoughnutChart = () => {
 
   const [view, setView] = useState('Assets')
 
@@ -38,9 +38,8 @@ const Donut = () => {
   }
 
   return (
-    <div className='my-5'>
-      <Doughnut data={data} />
-      <div className="flex flex-wrap">
+    <div className='grid-span-4'>
+      <div className="flex flex-wrap my-5">
         <div className="flex items-center me-4">
             <input id="assets" type="radio" value="Assets" checked={view === "Assets"} name="view" className="w-4 h-4" onChange={onOptionChange}/>
             <label htmlFor="assets" className="ms-2 text-sm font-medium">Assets</label>
@@ -50,8 +49,12 @@ const Donut = () => {
             <label htmlFor="individual" className="ms-2 text-sm font-medium">Individual</label>
         </div>
       </div>
+      <div className='h-72 mx-16'>
+        <Doughnut data={data} />
+      </div>
+
     </div>
   )
 }
 
-export default Donut
+export default DoughnutChart

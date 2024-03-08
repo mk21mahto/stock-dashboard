@@ -1,6 +1,6 @@
 import React from 'react'
-import { getAssetsMock } from '../../mock/getAssetsMock'
-import { getPortfolioMock } from '../../mock/getPortfolioMock'
+import { getAssetsMock } from '../../../../mock/getAssetsMock'
+import { getPortfolioMock } from '../../../../mock/getPortfolioMock'
 
 const useDoughNutData = () => {
     const assetsData = getAssetsMock.data.positions;
