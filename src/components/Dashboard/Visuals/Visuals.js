@@ -4,7 +4,7 @@ import Chart from './LineChart/Chart'
 
 const Visuals = () => {
   return (
-    <div className=' bg-white shadow-lg shadow-sky-300 px-5 mx-5'>
+    <div data-testid="visuals-component" className='bg-white shadow-lg shadow-sky-300 px-5 mx-5'>
       <div className='font-bold my-2 flex'>
          Total Balance : $10,881
          <div className='text-green-600'> (26.7%)</div>

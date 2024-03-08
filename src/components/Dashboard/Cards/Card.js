@@ -4,7 +4,7 @@ import TopPerformer from './TopPerformer'
 const Card = () => {
   return (
     <>
-      <div className='grid grid-flow-col mx-3 py-5'>
+      <div data-testid="card-component" className='grid grid-flow-col mx-3 py-5'>
         <TopPerformer title={'Top Holding'}/>
         <TopPerformer title={'Profitable Asset'} />
         <TopPerformer title={'Top Contributer'} />

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { getAssetsMock } from '../../../../mock/getAssetsMock'
 import { getPortfolioMock } from '../../../../mock/getPortfolioMock'
 
